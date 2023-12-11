@@ -1,0 +1,31 @@
+{
+  "name": "practicacucumber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run",
+    "posttest":"node cucumber-html-report.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^9.7.0",
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cucumber_report",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  },
+  "dependencies": {
+    "cucumber-html-reporter": "^7.1.1",
+    "cypress-multi-reporters": "^1.6.4",
+    "multiple-cucumber-html-reporter": "^3.5.0"
+  }  
+}
